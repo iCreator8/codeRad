@@ -167,3 +167,27 @@
 .video-demo .block-text p {
 	color: var(--white);
 }
+
+.video-box {
+	position: relative;
+	margin-bottom: -9.375rem;
+	z-index: 100;
+}
+
+.video-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 10px 20px rgba(57, 166, 251, 0.5);
+}
+
+.video-btn img {
+	width: var(--size-100);
+	height: var(--size-100);
+}
+
+.video-box > img {
+	max-width: 600px;
+	border-radius: 8px;
+}

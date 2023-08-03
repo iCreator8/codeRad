@@ -81,6 +81,7 @@
 .why-me-wrapper {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .why-me-wrapper div {
@@ -106,6 +107,7 @@
 	margin-bottom: var(--size-20);
 	line-height: 1.3;
 }
+
 .bg-contrast {
 	background-color: var(--contrast);
 	padding: var(--size-150, 0);
@@ -275,7 +277,7 @@
 
 .testimonial-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-template-rows: 1fr, 1fr;
 	gap: var(--size-20);
 	margin: 0 auto;
@@ -340,9 +342,123 @@
 	line-height: 1.6;
 }
 
+footer {
+	background-color: var(--footer);
+}
+
 footer .footer-top {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: var(--size-50);
 	padding: var(--size-150) 0;
+}
+
+footer .footer-bottom {
+	background-color: var(--footer-base);
+	width: 100vw;
+}
+
+footer .footer-col {
+	/* justify-self: center; */
+	align-items: center;
+}
+
+.footer-top h5 {
+	color: var(--white);
+	font-weight: 500;
+	margin-bottom: var(--size-16);
+}
+
+.contact-info li {
+	color: var(--white);
+	margin-bottom: var(--size-10);
+}
+
+.contact-info li i {
+	width: var(--size-30);
+}
+
+.social-icons ul li {
+	display: inline-block;
+	margin-right: var(--size-16);
+}
+
+.social-icons ul li a {
+	color: var(--white);
+	font-size: var(--size-16);
+}
+
+.services-wrapper p {
+	color: #858497;
+}
+
+.recent-posts {
+	display: flex;
+	margin-bottom: var(--size-16);
+	align-items: center;
+}
+
+.recent-posts > div {
+	width: var(--size-120);
+	margin-right: var(--size-10);
+}
+
+.post-inner h6 {
+	margin: 0;
+}
+
+.post-inner h6 a {
+	color: var(--white);
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+}
+
+.post-inner span {
+	color: var(--font-color-light);
+	font-size: var(--size-10);
+	margin: 0;
+	padding: 0;
+}
+
+.footer-bottom {
+	padding: var(--size-16) 0;
+}
+
+.copyright {
+}
+
+.footer-bottom-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+.footer-bottom-wrapper ul li {
+	display: inline-block;
+	margin-right: var(--size-10);
+}
+
+.footer-bottom-wrapper ul li a {
+	color: var(--white);
+}
+
+/* Adding move up button  */
+
+#scrollUp {
+	background-color: transparent;
+	background-image: linear-gradient(90deg, #9ccdfe 0%, #94aafd 100%);
+	color: var(--white);
+	font-size: var(--size-20);
+	height: var(--size-50);
+	width: var(--size-50);
+	line-height: var(--size-50);
+	position: fixed;
+	bottom: var(--size-30);
+	right: var(--size-30);
+	text-align: center;
+	border-radius: 8px;
+	cursor: pointer;
+	z-index: 100;
 }

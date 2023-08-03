@@ -13,12 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/988097ee2b.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/responsive.css">
   </head>
 
   <body>
+    <div id="pageTop"></div>
     <!-- navbar area controls  -->
     <nav class="navbar nav">
       <div class="container">
@@ -267,19 +270,19 @@
             <div class="contact-info">
               <h5>Need Help?</h5>
               <ul>
-                <li>1113 Princeton Dr, Glendale, CA 91205</li>
-                <li>+1 747 666 7040</li>
-                <li>+1 323 616 9397</li>
-                <li>icreatorlife@gmail.com</li>
+                <li><i class="fa-solid fa-location-dot"></i>1113 Princeton Dr, Glendale, CA 91205</li>
+                <li> <i class="fa-solid fa-phone"></i> +1 747 666 7040</li>
+                <li><i class="fa-solid fa-mobile-screen-button"></i>+1 323 616 9397</li>
+                <li><i class="fa-solid fa-envelope"></i>icreatorlife@gmail.com</li>
               </ul>
             </div>
 
             <div class="social-icons">
               <ul>
-                <li>X</li>
-                <li>X</li>
-                <li>X</li>
-                <li>X</li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-m"></i></a></li>
               </ul>
             </div>
           </div>
@@ -300,7 +303,7 @@
           <div class="footer-col">
             <h5>Recent Posts</h5>
             <div class="recent-posts">
-              <img src="/assets/images/blog1.jpg" alt="blog 1">
+              <div class="post-img-wrapper"><img src="/assets/images/blog1.jpg" alt="blog 1"></div>
               <div class="post-inner">
                 <h6><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dolorum.</a></h6>
                 <span>Sep 5th, 2023</span>
@@ -308,7 +311,7 @@
             </div>
 
             <div class="recent-posts">
-              <img src="/assets/images/blog2.jpg" alt="blog 2">
+              <div class="post-img-wrapper"><img src="/assets/images/blog2.jpg" alt="blog 2"></div>
               <div class="post-inner">
                 <h6><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dolorum.</a></h6>
                 <span>Sep 18th, 2023</span>
@@ -317,24 +320,29 @@
 
           </div>
         </div>
-        <div class="footer-bottom">
-          <div class="footer-bottom-wrapper">
-            <div class="copyright">
-              <p> Copyright @ 2023 CodeRAD Creations</p>
-            </div>
-            <div class="footer-bottom-links">
-              <ul>
-                <li>About</li>
-                <li>Services</li>
-                <li>Team</li>
-                <li>Contact</li>
-                <li>Blog</li>
-              </ul>
-            </div>
+
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-wrapper">
+          <div class="copyright">
+            <p> Copyright @ 2023 CodeRAD Creations</p>
+          </div>
+          <div class="footer-bottom-links">
+            <ul>
+
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+
           </div>
         </div>
       </div>
     </footer>
+
+    <a href="#pageTop" id="scrollUp"><i class="fa-solid fa-arrow-up"></i></a>
 
   </body>
 

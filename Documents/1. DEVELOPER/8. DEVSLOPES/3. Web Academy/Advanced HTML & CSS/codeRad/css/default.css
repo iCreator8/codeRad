@@ -26,8 +26,13 @@
 	--size-50: 3.125rem;
 	--size-70: 4.375rem;
 	--size-100: 6.25rem;
+	--size-120: 7.5rem;
 	--size-150: 9.375rem;
 	--size-200: 12.5rem;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -111,14 +116,28 @@ img {
 	box-shadow: 0px var(--size-10) var(--size-20) rgba(255, 255, 255, 0.4);
 }
 
-@media (min-width: 1200px) {
-	.container {
-		max-width: 1140px;
+@media (min-width: 768px) {
+	.pricing-table {
+		max-width: 720px;
+	}
+
+	.testimonial-grid {
+		max-width: 720px;
+	}
+
+	.footer-bottom-wrapper {
+		max-width: 720px;
 	}
 }
 
-@media (min-width: 768px) {
-	.pricing-table .testimonial-grid {
-		max-width: 720px;
+@media (min-width: 992px) {
+	footer .container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
 	}
 }

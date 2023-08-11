@@ -23,7 +23,7 @@
   <body>
     <div id="pageTop"></div>
     <!-- navbar area controls  -->
-    <nav class="navbar nav">
+    <nav id="topNav" class="navbar nav">
       <div class="container">
         <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarDropdown"><span>&#9776;</span></button>
         <a class="navbar-brand" href="index.html">CodeRad</a>
@@ -142,19 +142,19 @@
           <hr>
           <ul>
             <li><span class="title">Community Support</span>
-              <span class="icon">&#10003;</span>
+              <span class="icon"><i class="fa-solid fa-check"></i></span>
             </li>
             <li><span class="title">Flexible, simple license</span>
-              <span class="icon">&#10003;</span>
+              <span class="icon"><i class="fa-solid fa-check"></i></span>
             </li>
             <li><span class="title">100+ styled components</span>
-              <span class="icon">&#10761;</span>
+              <span class="icon"><i class="fa-solid fa-xmark"></i></span>
             </li>
             <li><span class="title">100+ header variations</span>
-              <span class="icon">&#10761;</span>
+              <span class="icon"><i class="fa-solid fa-xmark"></i></span>
             </li>
             <li><span class="title">Speedy build tooling</span>
-              <span class="icon">&#10761;</span>
+              <span class="icon"><i class="fa-solid fa-xmark"></i></span>
             </li>
           </ul>
         </div>
@@ -166,24 +166,24 @@
           <hr>
           <ul>
             <li><span class="title">Community Support</span>
-              <span class="icon checked">&#10003;</span>
+              <span class="icon checked"><i class="fa-solid fa-check"></i></span>
             </li>
             <li><span class="title">Flexible, simple license</span>
-              <span class="icon checked">&#10003;</span>
+              <span class="icon checked"><i class="fa-solid fa-check"></i></span>
             </li>
             <li><span class="title">100+ styled components</span>
-              <span class="icon checked">&#10003;</span>
+              <span class="icon checked"><i class="fa-solid fa-check"></i></span>
             </li>
             <li><span class="title">100+ header variations</span>
-              <span class="icon times">&#10761;</span>
+              <span class="icon times"><i class="fa-solid fa-xmark"></i></span>
             </li>
             <li><span class="title">Speedy build tooling</span>
-              <span class="icon times">&#10761;</span>
+              <span class="icon times"><i class="fa-solid fa-xmark"></i></span>
             </li>
-            <div class="plan-btn-wrapper">
-              <a href="" class="btn btn-primary">Learn More</a>
-            </div>
           </ul>
+          <div class="plan-btn-wrapper">
+            <a href="" class="btn btn-primary">Get Started</a>
+          </div>
         </div>
 
         <div class="price-card">
@@ -193,19 +193,19 @@
           <hr>
           <ul>
             <li><span class="title">Community Support</span>
-              <span class="icon">&#10003;</span>
+              <span class="icon"><i class="fa-solid fa-check"></i></span>
             </li>
             <li><span class="title">Flexible, simple license</span>
-              <span class="icon">&#10003;</span>
+              <span class="icon"><i class="fa-solid fa-check"></i></span>
             </li>
             <li><span class="title">100+ styled components</span>
-              <span class="icon">&#10003;</span>
+              <span class="icon"><i class="fa-solid fa-check"></i></span>
             </li>
             <li><span class="title">100+ header variations</span>
-              <span class="icon">&#10003;</span>
+              <span class="icon"><i class="fa-solid fa-check"></i></span>
             </li>
             <li><span class="title">Speedy build tooling</span>
-              <span class="icon">&#10003;</span>
+              <span class="icon"><i class="fa-solid fa-check"></i></span>
             </li>
           </ul>
         </div>
@@ -270,7 +270,7 @@
             <div class="contact-info">
               <h5>Need Help?</h5>
               <ul>
-                <li><i class="fa-solid fa-location-dot"></i>1113 Princeton Dr, Glendale, CA 91205</li>
+                <li><i class="fa-solid fa-location-dot"></i>1113 Princeton Dr, CA 91205</li>
                 <li> <i class="fa-solid fa-phone"></i> +1 747 666 7040</li>
                 <li><i class="fa-solid fa-mobile-screen-button"></i>+1 323 616 9397</li>
                 <li><i class="fa-solid fa-envelope"></i>icreatorlife@gmail.com</li>
@@ -291,13 +291,13 @@
             <h5>Services</h5>
             <div class="services-wrapper">
               <h5>Mobile Apps</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, maiores.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
 
               <h5>Brand Identity</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, maiores.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
 
               <h5>Social Media</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, maiores.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
           </div>
           <div class="footer-col">
@@ -342,8 +342,38 @@
       </div>
     </footer>
 
+    <!-- Scroll Up button here  -->
     <a href="#pageTop" id="scrollUp"><i class="fa-solid fa-arrow-up"></i></a>
 
+    <!-- Sticky footer here  -->
+
+    <!-- <div class="sticky-footer">
+      <div class="text-only">
+        <h3>Got a question?</h3>
+        <h5>We'd love to talk to you about how we can help you.</h5>
+      </div>
+      <div class="footer-btn"><a href="">Contact Us</a></div>
+    </div> -->
+    <script>
+      const nav = document.getElementById("topNav");
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add("sticky");
+        } else {
+          nav.classList.remove("sticky");
+        }
+      }
+
+      const navButton = document.querySelector('button[aria-expanded]');
+
+      function toggleNav({ target }) {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navButton.setAttribute('aria-expanded', !expanded);
+      }
+
+      navButton.addEventListener('click', toggleNav);
+
+    </script>
   </body>
 
 </html>

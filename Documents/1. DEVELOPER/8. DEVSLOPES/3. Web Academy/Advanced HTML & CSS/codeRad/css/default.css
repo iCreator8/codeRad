@@ -26,9 +26,13 @@
 	--size-50: 3.125rem;
 	--size-70: 4.375rem;
 	--size-100: 6.25rem;
+	--size-110: 6.875rem;
 	--size-120: 7.5rem;
 	--size-150: 9.375rem;
 	--size-200: 12.5rem;
+	--size-300: 18.75rem;
+	--size-350: 21.875rem;
+	--size-400: 25rem;
 }
 
 html {
@@ -81,8 +85,8 @@ img {
 
 .container {
 	width: 100%;
-	padding-left: 0.9375rem;
-	padding-right: 0.9375rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -132,7 +136,7 @@ img {
 
 @media (min-width: 992px) {
 	footer .container {
-		max-width: 960px;
+		max-width: 1080px;
 	}
 }
 

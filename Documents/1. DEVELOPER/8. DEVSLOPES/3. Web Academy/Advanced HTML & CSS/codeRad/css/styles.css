@@ -4,10 +4,6 @@
 	align-items: center;
 }
 
-[aria-controls="navbarDropdown"] {
-	display: none;
-}
-
 .navbar {
 	position: fixed;
 	top: 0;
@@ -15,7 +11,40 @@
 	left: 0;
 	z-index: 100;
 	transition: ease-in-out 0.3s;
-	padding: var(--size-16);
+	/* padding: var(--size-16); */
+}
+
+/* This Code is run under certain condition and used JS for it  */
+.navbar.sticky {
+	background: var(--white);
+	box-shadow: 0px 0px 20px rgba(48, 63, 100, 0.2);
+}
+
+.navbar.sticky .navbar-toggler span,
+.navbar.sticky .navbar-brand {
+	color: var(--font-color-dark);
+}
+/* JS code activated function ends here  */
+
+.navbar-toggler {
+	display: block;
+	position: absolute;
+	right: var(--size-20);
+	top: var(--size-10);
+	outline: none;
+	background: transparent;
+	border: 1px solid transparent;
+}
+
+.navbar-toggler span {
+	color: var(--white);
+	font-size: var(--size-20);
+	pointer-events: none;
+	cursor: pointer;
+}
+
+[aria-controls="navbarDropdown"] {
+	display: none;
 }
 
 .navbar-brand {
@@ -55,6 +84,7 @@
 
 .bg-header {
 	background-image: url("../assets/images/bg-header-1.jpg");
+	padding: var(--size-150) 0;
 }
 
 .bg-header::before {
@@ -88,8 +118,9 @@
 	flex: 1;
 }
 
-.block-text {
-	padding-right: var(--size-50);
+.why-me-wrapper .block-text {
+	padding-right: var(--size-100);
+	max-width: 35rem;
 }
 
 .block-text span {
@@ -110,7 +141,7 @@
 
 .bg-contrast {
 	background-color: var(--contrast);
-	padding: var(--size-150, 0);
+	padding: var(--size-150) 0;
 	margin: 0 auto;
 }
 
@@ -169,6 +200,13 @@
 .video-demo .block-text h2,
 .video-demo .block-text p {
 	color: var(--white);
+	margin: var(--size-50) 0;
+}
+.video-demo .block-text h2 {
+	margin-bottom: var(--size-10);
+}
+.video-demo .block-text p {
+	margin-top: var(--size-10);
 }
 
 .video-box {
@@ -219,7 +257,7 @@
 .price-card {
 	background-color: var(--white);
 	border-radius: 8px;
-	padding: var(--size-16);
+	padding: var(--size-40) var(--size-16);
 }
 
 .price-card .checked {
@@ -268,6 +306,11 @@
 
 .plan-btn-wrapper {
 	text-align: center;
+	padding-top: var(--size-20);
+}
+
+.plan-btn-wrapper a {
+	width: 100%;
 }
 
 .testimonials {
@@ -344,29 +387,33 @@
 
 footer {
 	background-color: var(--footer);
+	position: relative;
+	/* bottom: var(--size-110); */
 }
 
 footer .footer-top {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: var(--size-50);
-	padding: var(--size-150) 0;
+	padding: var(--size-70) 0;
 }
 
 footer .footer-bottom {
 	background-color: var(--footer-base);
-	width: 100vw;
+	width: 100%;
 }
 
 footer .footer-col {
-	/* justify-self: center; */
-	align-items: center;
+	/* align-items: center; */
+	justify-self: center;
+	max-width: 250px;
 }
 
 .footer-top h5 {
 	color: var(--white);
 	font-weight: 500;
 	margin-bottom: var(--size-16);
+	font-size: var(--size-16);
 }
 
 .contact-info li {
@@ -388,6 +435,9 @@ footer .footer-col {
 	font-size: var(--size-16);
 }
 
+.services-wrapper h5 {
+	margin-bottom: initial;
+}
 .services-wrapper p {
 	color: #858497;
 }
@@ -405,6 +455,7 @@ footer .footer-col {
 
 .post-inner h6 {
 	margin: 0;
+	font-size: var(--size-10);
 }
 
 .post-inner h6 a {
@@ -425,12 +476,14 @@ footer .footer-col {
 	padding: var(--size-16) 0;
 }
 
-.copyright {
+.copyright p {
+	margin-bottom: 0;
 }
 
 .footer-bottom-wrapper {
 	display: flex;
 	justify-content: space-evenly;
+	align-items: center;
 	margin: 0 auto;
 	flex-wrap: wrap;
 }
@@ -460,5 +513,56 @@ footer .footer-col {
 	text-align: center;
 	border-radius: 8px;
 	cursor: pointer;
+	z-index: 101;
+}
+
+/* Sticky footer area controls  */
+.sticky-footer {
+	background-color: transparent;
+	background-image: url("../assets/images/sticky-footer-img.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	/* background-size: cover; */
+	width: 100%;
+	height: var(--size-110);
+	display: flex;
+	justify-content: space-evenly;
+	justify-content: space-around;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
 	z-index: 100;
+}
+
+.sticky-footer .text-only {
+	color: var(--white);
+	margin-left: var(--size-350);
+}
+
+.sticky-footer h3 {
+	font-weight: 600;
+	margin-bottom: 0;
+	letter-spacing: 1.5px;
+}
+
+.sticky-footer h5 {
+	margin-top: 0;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+.sticky-footer .footer-btn {
+	background-color: var(--white);
+	padding: var(--size-10);
+	width: var(--size-120);
+	border-radius: 8px;
+	text-align: center;
+	margin-right: var(--size-150);
+}
+
+.footer-btn a {
+	color: var(--font-color-dark);
+	font-weight: 600;
 }

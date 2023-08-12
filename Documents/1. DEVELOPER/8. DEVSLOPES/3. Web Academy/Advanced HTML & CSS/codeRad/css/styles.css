@@ -235,7 +235,6 @@
 
 .pricing-header {
 	text-align: center;
-	/* padding-right: 0; */
 	margin: var(--size-100) 0;
 }
 
@@ -247,7 +246,7 @@
 .pricing-table {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-	gap: var(--size-18);
+	gap: var(--size-30);
 	margin: auto;
 	margin-top: var(--size-100);
 	align-items: flex-start;
